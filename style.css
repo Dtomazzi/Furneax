@@ -1,0 +1,234 @@
+body {
+  font-family: "Roboto";
+  /* good range for body content is between 14px-20px */
+  font-size: 16px;
+  /* line-height will be equal to 24px */
+  line-height: 1.5;
+  color: #48353a;
+}
+
+header {
+  padding: 10px 15px;
+  /* when we float elements inside of our header, they are taken outside their regular box flow of the page and as a result, our header collapses. To get the header to have it's proper height, we can use overflow as a trick */
+  overflow: hidden;
+}
+header h1 {
+  float: left;
+}
+header nav {
+  float: right;
+  margin-top: 3px;
+}
+header nav a {
+  color: #48353a;
+  text-decoration: none;
+  margin-left: 12px;
+  /* without changing our html we can make our letters uppercase */
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero {
+  background-image: url("hero.jpg");
+  background-size: cover;
+  padding-top: 230px;
+  padding-bottom: 200px;
+  /* here we position background image on the x and y axis respectfully */
+  background-position: right center;
+}
+
+.hero div {
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right:  20px;
+  text-align:  center;
+}
+
+.hero h2 {
+  font-family: "David Libre";
+  font-size:  64px;
+  font-weight: 700;
+  line-height:  1;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flowers {
+  overflow: hidden;
+}
+
+.flowers img {
+  float: left;
+  width: 33.333%;
+}
+
+ .quotes {
+  overflow: hidden;
+}
+
+.quotes div {
+  width: 50%;
+  float: left;
+  text-align:  center;
+  padding: 50px 20px 40px 20px;
+}
+
+.quotes img {
+  width: 75px;
+  border-radius: 100%;
+}
+
+.quotes blockquote {
+  font-family: "David Libre";
+  font-size:  24px;
+  line-height: 1.15;
+  font-weight:  700;
+  max-width: 400px;
+  margin: 15px auto 5px auto;
+}
+
+.cream-background {
+  background-color: #F7F1EE;
+}
+
+.chair {
+  background-image: url("full-bleed.jpg");
+  background-position: center bottom;
+  height: 500px;
+  padding: 0;
+}
+
+.logos {
+  background-color: #eeae9f;
+  padding: 20px 20px 35px 20px;
+  text-align: center;
+}
+
+.logos p {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.logos img {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+footer {
+  background-color: #47353A;
+  padding: 25px 30px;
+  overflow: hidden;
+}
+
+footer img {
+  float: left;
+}
+
+footer p {
+  float: right;
+  font-size: 14px;
+  color: #ccc9ca;
+  font-weight: 700;
+}
+/* first breakpoint will be at 600 pixels */
+@media (max-width:600px) {
+  
+  .hero h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+  
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .chair {
+    height: 400px;
+  }
+  
+  .quotes div {
+    float: none;
+    width: auto;
+    padding: 30px 30px 40px 30px;
+  }
+  
+  .quotes blockquote {
+    font-size: 20px;
+  }
+  
+  .quotes p {
+    display: none;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+  
+  header nav {
+    /* keep nav aligned with h1 logo in left */
+    line-height: 24px;
+  }
+}
+
+@media(max-width:430px){
+  header h1, header nav {
+    float: none;
+  }
+  
+  header nav a {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+  
+  .flowers img {
+    float: none;
+  }
+  
+  footer {
+    padding: 30px 20px;
+  }
+ 
+}
+
+@media(max-width:820px) {
+  .logos img {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width:640px) {
+  .logos img {
+     margin: 0 auto 5px auto;
+    display: block;
+  }
+  
+  .logos img:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media(min-width:820px) {
+  /* styles only apply to desktop view */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 0px rgba(51,51,51,0.4);
+  }
+  
+  .hero {
+    margin-top: 50px;
+  }
+}
